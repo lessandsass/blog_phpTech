@@ -10,10 +10,10 @@ class AdminAuthenticate
 {
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->guard('admin')->check()) {
-            return $next($request);
-        } else {
-            return auth()->shouldUse('admin');
+        if (!auth()->guard('admin')->check()) {
+            return redirect()->route('admin.login');
         }
+    
+        return $next($request);
     }
 }
