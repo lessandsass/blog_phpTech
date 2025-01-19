@@ -34,7 +34,6 @@ class AdminLoginController extends Controller
                     $request->session()->flash('error', 'Either your email or password is incorrect');
                     return redirect()->route('admin.login');
 
-                    // return redirect(route('admin.login'))->with('error', 'You are not an admin');
                 }
 
             } else {
