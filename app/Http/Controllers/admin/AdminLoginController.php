@@ -21,6 +21,7 @@ class AdminLoginController extends Controller
             'password' => 'required',
         ]);
 
+        // User has been created using tinker
         if ($validator->passes()) {
 
             if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
@@ -33,7 +34,6 @@ class AdminLoginController extends Controller
                     Auth::guard('admin')->logout();
                     $request->session()->flash('error', 'Either your email or password is incorrect');
                     return redirect()->route('admin.login');
-
                 }
 
             } else {
