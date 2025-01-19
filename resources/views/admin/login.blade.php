@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+<div class="flex flex-col items-center justify-center px-6 py-8 mx-auto lg:py-0 lg:h-5/6 md:h-screen">
 
     @if (Session::has('error'))
         <div class="mb-6 text-center font-medium bg-red-500 p-4 rounded-lg text-slate-100 text-sm absolute top-12 left-0 right-0 w-4/12 mx-auto">
