@@ -13,22 +13,47 @@
         <ul class="flex items-center">
 
             <li>
-                <a href="{{ route('home') }}" class="p-3">
+                <a href="{{ route('home') }}" class="px-2 py-3 mx-1">
                     Home
                 </a>
             </li>
 
             <li>
-                <a href="{{ route('admin.dashboard') }}" class="p-3">
+                <a href="{{ route('admin.dashboard') }}" class="px-2 py-3 mx-1">
                     Dashboard
                 </a>
             </li>
         </ul>
 
         <ul class="flex items-center">
+
+            <li>
+                <a href="{{ route('admin.dashboard') }}" class="px-2 py-3 mx-1">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ route('admin.dashboard') }}" class="px-2 py-3 mx-1">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ route('admin.dashboard') }}" class="px-2 py-3 mx-1">
+                    FAQ
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ route('admin.dashboard') }}" class="px-2 py-3 mx-1">
+                    Blog
+                </a>
+            </li>
+
             @if (auth()->guard('admin')->check())
                 <li>
-                    {{-- <a href="#" class="p-3">{{ auth()->user()->name }}</a> --}}
+                    {{-- <a href="#" class="px-2 py-3 mx-1">{{ auth()->user()->name }}</a> --}}
                 </li>
 
                 <li>
@@ -40,30 +65,22 @@
 
             @else
                 <li>
-                    <a href="{{ route('admin.auth') }}" class="p-3">Login</a>
+                    <a href="{{ route('admin.auth') }}" class="px-2 py-3 mx-1">Login</a>
                 </li>
                 <li>
-                    <a href="" class="p-3">Register</a>
+                    <a href="" class="px-2 py-3 mx-1">Register</a>
                 </li>
             @endif
         </ul>
     </nav>
 
-    <header>
-        <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-            Header
-        </h1>
-    </header>
+    {{-- @include('layouts.header') --}}
 
-    <main class="container mx-auto mt-6 px-6">
+    <main class="container mx-auto mt-6 px-6 py-6">
         @yield('content')
     </main>
 
-    <footer>
-        <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-            Footer
-        </h1>
-    </footer>
+    @include('layouts.footer')
 
 </body>
 </html>
