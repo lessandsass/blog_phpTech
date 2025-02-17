@@ -49,9 +49,21 @@
         </ul>
     </nav>
 
-    <div class="container mx-auto mt-6 px-6">
+    <header>
+        <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+            Header
+        </h1>
+    </header>
+
+    <main class="container mx-auto mt-6 px-6">
         @yield('content')
-    </div>
+    </main>
+
+    <footer>
+        <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+            Footer
+        </h1>
+    </footer>
 
 </body>
 </html>
