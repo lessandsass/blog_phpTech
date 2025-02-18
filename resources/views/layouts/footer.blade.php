@@ -5,7 +5,7 @@
         <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
             <a class="flex title-font font-medium items-center md:justify-start justify-center text-slate-400">
                 <x-logo />
-                <span class="ml-3 text-xl text-slate-400">Vipublocks</span>
+                <span class="ml-3 text-xl text-slate-400">Vipu</span>
             </a>
             <p class="mt-2 text-sm text-slate-300">Air plant banjo lyft occupy retro adaptogen indego</p>
         </div>
@@ -89,7 +89,7 @@
     <div class="dark:bg-slate-800">
       <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
 
-        <p class="text-slate-500 text-sm text-center sm:text-left">© 2025 Vipublocks —
+        <p class="text-slate-500 text-sm text-center sm:text-left">© 2025 Vipurthanan —
           <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-slate-600 ml-1" target="_blank">@vipu</a>
         </p>
 
