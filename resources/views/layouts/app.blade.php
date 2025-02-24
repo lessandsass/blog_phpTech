@@ -78,7 +78,7 @@
 
     {{-- @include('layouts.header') --}}
 
-    <main class="container mx-auto mt-6 px-6 py-6">
+    <main class="container mx-auto">
         @yield('content')
     </main>
 

@@ -5,15 +5,17 @@
 <section>
     <div id="default-carousel" class="relative w-full" data-carousel="static">
         <!-- Carousel wrapper -->
-        <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+        <div class="relative h-56 overflow-hidden md:h-96">
             <!-- Item 1 -->
             <div class="hidden duration-500 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets\images\pexels-olia-danilevich-4974912.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
+
             <!-- Item 2 -->
             <div class="hidden duration-500 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets/images/pexels-divinetechygirl-1181467.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
+
             <!-- Item 3 -->
             <div class="hidden duration-500 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets/images/pexels-pixabay-39284.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
@@ -28,6 +30,7 @@
             <div class="hidden duration-500 ease-in-out" data-carousel-item>
                 <img src="{{ asset('assets/images/pexels-mikhail-nilov-7988079.jpg') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
             </div>
+
         </div>
         <!-- Slider indicators -->
         <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
