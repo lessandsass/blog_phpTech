@@ -7,6 +7,7 @@
     <title>Blog-Vipu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.0/flowbite.min.js"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
 
 </head>
 <body class="bg-slate-900">
@@ -30,7 +31,7 @@
         <ul class="flex items-center">
 
             <li>
-                <a href="{{ route('admin.dashboard') }}" class="px-2 py-3 mx-1">
+                <a href="{{ route('about') }}" class="px-2 py-3 mx-1">
                     About
                 </a>
             </li>
@@ -78,7 +79,7 @@
 
     {{-- @include('layouts.header') --}}
 
-    <main class="container mx-auto">
+    <main class="mx-auto">
         @yield('content')
     </main>
 
