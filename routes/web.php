@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\AdminLoginController;
+use App\Http\Controllers\ServicesController;
 
 // Route::get('/', function () {
 //     return view('home');
@@ -11,6 +12,7 @@ use App\Http\Controllers\admin\AdminLoginController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('about-us', [HomeController::class, 'about'])->name('about');
+Route::get('services', [ServicesController::class, 'index'])->name('services');
 
 Route::group(['prefix' => 'admin'], function() {
 

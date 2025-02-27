@@ -37,7 +37,7 @@
             </li>
 
             <li>
-                <a href="{{ route('admin.dashboard') }}" class="px-2 py-3 mx-1">
+                <a href="{{ route('services') }}" class="px-2 py-3 mx-1">
                     Services
                 </a>
             </li>
