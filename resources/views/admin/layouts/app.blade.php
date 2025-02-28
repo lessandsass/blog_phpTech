@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind Admin Template</title>
+    <title>Laravel Blog Admin</title>
     <meta name="author" content="Vipurthanan">
     <meta name="description" content="">
 
@@ -330,22 +330,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-{{-- @extends('layouts.app')
-
-@section('content')
-<div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-
-
-
-</div>
-@endsection --}}
-

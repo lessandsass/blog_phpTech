@@ -7,7 +7,7 @@ use App\Http\Controllers\admin\AdminLoginController;
 use App\Http\Controllers\ServicesController;
 
 // Route::get('/', function () {
-//     return view('home');
+//     return view('home'); 
 // })->name('home');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
