@@ -143,7 +143,9 @@
 
             <h1 class="text-3xl text-black pb-6">Dashboard</h1>
 
+            {{-- Monthly reports & Resolved reports --}}
             <div class="flex flex-wrap mt-6">
+
                 <div class="w-full lg:w-1/2 pr-0 lg:pr-2">
                     <p class="text-xl pb-3 flex items-center">
                         <i class="fas fa-plus mr-3"></i> Monthly Reports
@@ -152,6 +154,7 @@
                         <canvas id="chartOne" width="400" height="200"></canvas>
                     </div>
                 </div>
+
                 <div class="w-full lg:w-1/2 pl-0 lg:pl-2 mt-12 lg:mt-0">
                     <p class="text-xl pb-3 flex items-center">
                         <i class="fas fa-check mr-3"></i> Resolved Reports
@@ -160,6 +163,42 @@
                         <canvas id="chartTwo" width="400" height="200"></canvas>
                     </div>
                 </div>
+
+            </div>
+
+            {{-- TinyMCE Wysiwyg Editor --}}
+            <div class="flex flex-wrap mt-6">
+                <form action="">
+                    <div>
+                        {{-- textarea --}}
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </div>
+                </form>
+
+                <script src="https://cdn.tiny.cloud/1/xcidtogz6ldhbxfbtzvxn9f8mjejjbkc74q8a509nz6ooqo9/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+                <script>
+                    tinymce.init({
+                        selector: 'textarea',
+                        plugins: [
+                        // Core editing features
+                        'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
+                        // Your account includes a free trial of TinyMCE premium features
+                        // Try the most popular premium features until Mar 16, 2025:
+                        'checklist', 'mediaembed', 'casechange', 'export', 'formatpainter', 'pageembed', 'a11ychecker', 'tinymcespellchecker', 'permanentpen', 'powerpaste', 'advtable', 'advcode', 'editimage', 'advtemplate', 'ai', 'mentions', 'tinycomments', 'tableofcontents', 'footnotes', 'mergetags', 'autocorrect', 'typography', 'inlinecss', 'markdown','importword', 'exportword', 'exportpdf'
+                        ],
+                        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+                        tinycomments_mode: 'embedded',
+                        tinycomments_author: 'Author name',
+                        mergetags_list: [
+                        { value: 'First.Name', title: 'First Name' },
+                        { value: 'Email', title: 'Email' },
+                        ],
+                        ai_request: (request, respondWith) => respondWith.string(() => Promise.reject('See docs to implement AI Assistant')),
+                    });
+                </script>
+
             </div>
 
             <div class="w-full mt-12">
