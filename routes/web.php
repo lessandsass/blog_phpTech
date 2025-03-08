@@ -2,12 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\AdminLoginController;
-use App\Http\Controllers\ServicesController;
 
 // Route::get('/', function () {
-//     return view('home'); 
+//     return view('home');
 // })->name('home');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -28,6 +29,8 @@ Route::group(['prefix' => 'admin'], function() {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
         Route::post('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
+
+        Route::get('/services/create', [ServiceController::class, 'create'])->name('services.create');
 
     });
 
